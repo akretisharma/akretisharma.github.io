@@ -1,0 +1,88 @@
+/* Layout padding */
+#grid-container > div {
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Container */
+  .content-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 50rem;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+  
+  /* Glow effect */
+  .glow-border {
+    border-radius: 1rem;
+    border: 2px solid transparent;
+    transition:
+      border-color 0.5s ease,
+      box-shadow 0.5s ease;
+    will-change: box-shadow, border-color;
+  }
+  
+  .glow-border:hover {
+    border-color: rgba(236, 72, 153, 0.6);
+    box-shadow:
+      0 0 12px rgba(236, 72, 153, 0.5),
+      0 0 24px rgba(236, 72, 153, 0.4),
+      0 0 36px rgba(236, 72, 153, 0.3);
+  }
+  
+  
+  /* Carousel */
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  
+  .carousel-wrapper {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+  }
+  
+  .carousel-inner {
+    display: flex;
+    gap: 2rem;
+    animation: scroll 20s linear infinite;
+    will-change: transform;
+  }
+  
+  .carousel-wrapper:hover .carousel-inner {
+    animation-play-state: paused;
+  }
+  
+  /* Gradient background */
+  @keyframes gradientShift {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+  }
+  
+  .animate-gradient {
+    background: linear-gradient(135deg, #0f0f1a, #1a1a2e, #2a1b2e);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+  }
+  
+  /* Active filter tab */
+  .filter-btn.active {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+
+  /* Highlighted active tab */
+.filter-btn.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    font-weight: 600;
+    transform: scale(1.05);
+    color: #fff;
+    border-color: rgba(236, 72, 153, 0.6);
+  }
+  .filter-btn {
+    transition: all 0.3s ease;
+  }
+    
