@@ -26,7 +26,7 @@ export default function Page() {
         Hey, I'm Akreti 👋
       </h1>
       <p className="mb-6">
-        {`I'm a grade 12 high school student with an interest in software engineering and AI/ML.`}
+        {`I'm a rising grade 12 high school student interested in software/biomedical engineering.`}
       </p>
       <Socials />
       </section>
