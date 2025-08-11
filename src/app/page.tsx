@@ -4,7 +4,8 @@ import { Icons } from "@/components/ui/icons";
 import { ProjectCard } from "@/components/project-card";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import {ExperienceSection} from "@/components/experience-section"
-import Socials from "@/components/socials";
+import TargetCursor from '@/components/target-cursor';
+
 
 export default function Page() {
   const carouselRef = useRef<HTMLDivElement>(null);
@@ -21,6 +22,11 @@ export default function Page() {
 
   return (
     <main>
+      <div>
+      <TargetCursor 
+        spinDuration={2}
+        hideDefaultCursor={true}
+      />
       <section id="hero" className="mb-8">
       <h1 className="mb-8 text-3xl font-semibold tracking-tighter">
         Hey, I'm Akreti 👋
@@ -28,14 +34,57 @@ export default function Page() {
       <p className="mb-6">
         {`I'm a rising grade 12 high school student interested in software/biomedical engineering.`}
       </p>
-      <Socials />
+      <div>
+        <ul className="font-sm mt-8 flex flex-col space-x-0 space-y-2 text-neutral-600 md:flex-row md:space-x-4 md:space-y-0 dark:text-neutral-300">
+          <li className="cursor-target">
+            <a
+              className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://www.linkedin.com/in/akretisharma/"
+            >
+              <Icons.arrow className="size-3" />
+              <p className="ml-2 h-7">linkedin</p>
+            </a>
+          </li>
+          <li className="cursor-target">
+            <a
+              className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://github.com/akretisharma"
+            >
+              <Icons.arrow className="size-3" />
+              <p className="ml-2 h-7">github</p>
+            </a>
+          </li>
+          <li className="cursor-target">
+            <a
+              className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
+              rel="noopener noreferrer"
+              target="_blank"
+              href="./Akreti_Sharma_Resume.pdf"
+            >
+              <Icons.arrow className="size-3" />
+              <p className="ml-2 h-7">resume</p>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
       </section>
 
       <section id="experience" className="mb-8">
         <h2 className="mb-2 text-xl font-semibold">My Experience</h2>
+        <div className="cursor-target">
     <ExperienceSection title="Hackathon Participant @ Hack Canada" date="Feb 2025" description="Built NutriMind, an AI-powered recipe recommendation platform that helps users find personalized meal ideas based on dietary preferences, allergies, etc." />
+    </div>
+    <div className="cursor-target">
     <ExperienceSection title="Challenge Finalist @ KWK X Deliotte" date="Dec 2024 - Feb 2025" description="Developed GaiaIntel, an app leveraging AI to provide sustainability insights and optimize eco-friendly choices." />
+    </div>
+    <div className="cursor-target">
     <ExperienceSection title="App Development Scholar @ KWK" date="Aug 2024" description="Developed Care Comrade, an app designed to assist in emergency situations by providing step-by-step solutions to common problems." />
+    </div>
       </section>
 
       <section id="projects" className="mb-8">
@@ -54,7 +103,7 @@ export default function Page() {
     className="flex gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide"
   >
 
-<div className="flex-shrink-0 w-[280px] snap-start">
+<div className="flex-shrink-0 w-[280px] snap-start cursor-target">
       <ProjectCard
   href={"https://docs.google.com/presentation/d/1xIsxaxNSJdumuowEzKZLmYBEwFjiGipKvLNWsP8fNVc/edit?usp=sharing"}
   key={"EchoLens"}
@@ -81,7 +130,7 @@ export default function Page() {
 />
 </div>
 
-<div className="flex-shrink-0 w-[280px] snap-start">
+<div className="flex-shrink-0 w-[280px] snap-start cursor-target">
       <ProjectCard
   href={"https://github.com/NimayDesai/NutriMind"}
   key={"NutriMind"}
@@ -114,7 +163,7 @@ export default function Page() {
   ]}
 />
 </div>
-<div className="flex-shrink-0 w-[280px] snap-start">
+<div className="flex-shrink-0 w-[280px] snap-start cursor-target">
 <ProjectCard
   href={"https://github.com/akretisharma/GaiaIntel"}
   key={"GaiaIntel"}
@@ -139,7 +188,7 @@ export default function Page() {
   ]}
 />
 </div>
-<div className="flex-shrink-0 w-[280px] snap-start">
+<div className="flex-shrink-0 w-[280px] snap-start cursor-target">
 <ProjectCard
   href={"https://github.com/NimayDesai/NutriMind"}
   key={"Care Comrade"}
@@ -164,7 +213,7 @@ export default function Page() {
   ]}
 />
 </div>
-<div className="flex-shrink-0 w-[280px] snap-start">
+<div className="flex-shrink-0 w-[280px] snap-start cursor-target">
 <ProjectCard
   href={"https://github.com/NimayDesai/NutriMind"}
   key={"Yelp Business Data Finder"}
@@ -198,6 +247,7 @@ export default function Page() {
   </button>
       </div>
     </section>
+    </div>
   </main>
     
     
