@@ -18,7 +18,7 @@ export function PhotoCard({
   return (
       <div
         className={cn(
-          "group relative flex flex-col overflow-hidden h-full rounded-xl border border-neutral-200 bg-black text-white transition-all duration-300 ease-out",
+          "group relative flex flex-col overflow-hidden h-full rounded-xl border border-neutral-200 bg-white dark:bg-black text-black dark:text-white transition-all duration-300 ease-out",
           "dark:border-neutral-800", "w-55 h-80",
           className
         )}
@@ -33,7 +33,7 @@ export function PhotoCard({
           />
         )}
 
-<div className="absolute inset-x-0 bottom-0 h-5/12 bg-gradient-to-t from-black/90 via-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+<div className="absolute inset-x-0 bottom-0 h-5/12 bg-gradient-to-t from-white/90 via-white/70 dark:bg-gradient-to-t dark:from-black/90 dark:via-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
         <div className="absolute inset-x-0 bottom-0 z-10 p-4 
         opacity-0 translate-y-4 
