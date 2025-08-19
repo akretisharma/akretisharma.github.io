@@ -104,6 +104,43 @@ export default function Page() {
   >
 
 <div className="flex-shrink-0 w-[280px] snap-start cursor-target">
+  <ProjectCard
+    href={"https://devpost.com/software/goodminton"}
+    key={"Goodminton"}
+    title={"Goodminton"}
+    description={
+      "AI-powered badminton match analyzer built at Ignition Hacks V6. Uses computer vision with YOLO and motion tracking to detect shuttlecock movement, track rallies, and update scores in real time. Features a Next.js + Tailwind scoreboard UI with WebSocket streaming."
+    }
+    dates={"Aug 2025"}
+    tags={[
+      "Python",
+      "OpenCV",
+      "Next.js",
+      "JavaScript",
+      "YOLO",
+      "TailwindCSS",
+      "WebSocket",
+      "Roboflow",
+    ]}
+    image="/goodminton.jpg"
+    video={""}
+    links={[
+      {
+        type: "Devpost",
+        href: "https://devpost.com/software/goodminton",
+        icon: <Icons.globe className="size-3" />,
+      },
+      {
+        type: "Github",
+        href: "https://github.com/PenguinPush/ignitionhacks-v6",
+        icon: <Icons.github className="size-3" />,
+      },
+    ]}
+  />
+</div>
+
+
+<div className="flex-shrink-0 w-[280px] snap-start cursor-target">
       <ProjectCard
   href={"https://docs.google.com/presentation/d/1xIsxaxNSJdumuowEzKZLmYBEwFjiGipKvLNWsP8fNVc/edit?usp=sharing"}
   key={"EchoLens"}

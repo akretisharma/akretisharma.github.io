@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useCallback, useMemo } from "react";
+import React, { useEffect, useRef, useCallback, useMemo, useState } from "react";
 import { gsap } from "gsap";
 
 export interface TargetCursorProps {
@@ -16,6 +16,8 @@ const TargetCursor: React.FC<TargetCursorProps> = ({
   const cornersRef = useRef<NodeListOf<HTMLDivElement>>(null);
   const spinTl = useRef<gsap.core.Timeline>(null);
   const dotRef = useRef<HTMLDivElement>(null);
+  const [hasCursor, setHasCursor] = useState(true);
+
   const constants = useMemo(
     () => ({
       borderWidth: 3,
@@ -24,6 +26,36 @@ const TargetCursor: React.FC<TargetCursorProps> = ({
     }),
     []
   );
+
+  useEffect(() => {
+    const checkCursorCapability = () => {
+      const hasCoarsePointer = window.matchMedia("(pointer: coarse)").matches;
+      
+      const hasFinePointer = window.matchMedia("(pointer: fine)").matches;
+      
+      const canHover = window.matchMedia("(hover: hover)").matches;
+      
+      const deviceHasCursor = hasFinePointer && canHover && !hasCoarsePointer;
+      
+      setHasCursor(deviceHasCursor);
+    };
+
+    checkCursorCapability();
+
+    const coarsePointerQuery = window.matchMedia("(pointer: coarse)");
+    const finePointerQuery = window.matchMedia("(pointer: fine)");
+    const hoverQuery = window.matchMedia("(hover: hover)");
+
+    coarsePointerQuery.addListener(checkCursorCapability);
+    finePointerQuery.addListener(checkCursorCapability);
+    hoverQuery.addListener(checkCursorCapability);
+
+    return () => {
+      coarsePointerQuery.removeListener(checkCursorCapability);
+      finePointerQuery.removeListener(checkCursorCapability);
+      hoverQuery.removeListener(checkCursorCapability);
+    };
+  }, []);
 
   const moveCursor = useCallback((x: number, y: number) => {
     if (!cursorRef.current) return;
@@ -36,7 +68,7 @@ const TargetCursor: React.FC<TargetCursorProps> = ({
   }, []);
 
   useEffect(() => {
-    if (!cursorRef.current) return;
+    if (!hasCursor || !cursorRef.current) return;
 
     const originalCursor = document.body.style.cursor;
     if (hideDefaultCursor) {
@@ -313,6 +345,8 @@ const TargetCursor: React.FC<TargetCursorProps> = ({
       window.removeEventListener("mousemove", moveHandler);
       window.removeEventListener("mouseover", enterHandler);
       window.removeEventListener("scroll", scrollHandler);
+      window.removeEventListener("mousedown", mouseDownHandler);
+      window.removeEventListener("mouseup", mouseUpHandler);
 
       if (activeTarget) {
         cleanupTarget(activeTarget);
@@ -321,10 +355,10 @@ const TargetCursor: React.FC<TargetCursorProps> = ({
       spinTl.current?.kill();
       document.body.style.cursor = originalCursor;
     };
-  }, [targetSelector, spinDuration, moveCursor, constants, hideDefaultCursor]);
+  }, [targetSelector, spinDuration, moveCursor, constants, hideDefaultCursor, hasCursor]);
 
   useEffect(() => {
-    if (!cursorRef.current || !spinTl.current) return;
+    if (!hasCursor || !cursorRef.current || !spinTl.current) return;
     
     if (spinTl.current.isActive()) {
       spinTl.current.kill();
@@ -332,7 +366,12 @@ const TargetCursor: React.FC<TargetCursorProps> = ({
         .timeline({ repeat: -1 })
         .to(cursorRef.current, { rotation: "+=360", duration: spinDuration, ease: "none" });
     }
-  }, [spinDuration]);
+  }, [spinDuration, hasCursor]);
+
+  // Don't render the cursor on touch devices
+  if (!hasCursor) {
+    return null;
+  }
 
   return (
     <div 
