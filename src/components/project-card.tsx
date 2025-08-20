@@ -26,6 +26,7 @@ interface Props {
     href: string;
   }[];
   className?: string;
+  hackathonWinner?: boolean;
 }
 
 export function ProjectCard({
@@ -39,6 +40,7 @@ export function ProjectCard({
   video,
   links,
   className,
+  hackathonWinner = false,
 }: Props) {
   return (
     <Card
@@ -49,18 +51,28 @@ export function ProjectCard({
       )}
       
 >
-  <Link href={href || "#"} target="_blank" className={cn("block cursor-pointer", className)}>
-    {image && (
-      <Image
-        src={image}
-        alt={title}
-        width={500}
-        height={300}
-        draggable={false}
-        className="h-40 w-full object-cover object-top rounded-t-xl select-none"
-      />
-    )}
-  </Link>
+<Link href={href || "#"} target="_blank" className={cn("block cursor-pointer relative", className)}>
+        {image && (
+          <>
+            <Image
+              src={image}
+              alt={title}
+              width={500}
+              height={300}
+              draggable={false}
+              className="h-40 w-full object-cover object-top rounded-t-xl select-none"
+            />
+            {hackathonWinner && (
+              <div className="absolute top-3 right-4 flex items-center rounded-full bg-gradient-to-r from-yellow-300 to-orange-400 pl-3 pr-6 py-1 shadow-md border-2 border-white/50">
+                <span className="text-white font-bold text-sm">Winner</span>
+                <span className="text-4xl absolute -right-2 rotate-15">🏆</span>
+              </div>
+            )}
+
+
+          </>
+        )}
+      </Link>
 
   <CardHeader className="mt-4 px-4">
     <CardTitle className="mt-1 text-lg font-semibold text-black dark:text-white">

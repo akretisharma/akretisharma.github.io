@@ -136,6 +136,7 @@ export default function Page() {
         icon: <Icons.github className="size-3" />,
       },
     ]}
+    hackathonWinner
   />
 </div>
 
@@ -146,7 +147,7 @@ export default function Page() {
   key={"EchoLens"}
   title={"EchoLens"}
   description={
-    "Assistive smart glasses prototype using YOLOv5 for real-time object detection and a Wio Terminal light sensor to simulate ultrasonic distance sensing. Audio feedback delivers spatial awareness to visually impaired users. Built with Python, YOLOv5, and Wio Terminal."
+    "Assistive smart glasses prototype using YOLOv5 for real-time object detection and a Wio Terminal light sensor to simulate ultrasonic distance sensing built at Design Like a Girl 2025. Audio feedback delivers spatial awareness to visually impaired users. Built with Python, YOLOv5, and Wio Terminal."
   }
   dates={"July 2025"}
   tags={[
@@ -164,6 +165,7 @@ export default function Page() {
       icon: <Icons.googleDrive className="size-3" />,
     },
   ]}
+  hackathonWinner
 />
 </div>
 
