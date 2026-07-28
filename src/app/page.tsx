@@ -32,7 +32,7 @@ export default function Page() {
         Hey, I'm Akreti 👋
       </h1>
       <p className="mb-6">
-        {`I'm a rising grade 12 high school student interested in software/biomedical engineering.`}
+  {`I'm an incoming Computer Science student at the University of Waterloo interested in software engineering, AI, and biomedical technology. I enjoy building intelligent systems that combine machine learning, computer vision, and real-world applications.`}
       </p>
       <div>
         <ul className="font-sm mt-8 flex flex-col space-x-0 space-y-2 text-neutral-600 md:flex-row md:space-x-4 md:space-y-0 dark:text-neutral-300">
@@ -74,18 +74,53 @@ export default function Page() {
       </div>
       </section>
 
+      <section id="education" className="mb-8">
+  <h2 className="mb-2 text-xl font-semibold">Education</h2>
+
+  <div className="cursor-target">
+    <ExperienceSection
+      title="University of Waterloo"
+      date="Sep 2026 – Present"
+      description="Bachelor of Computer Science (Honours), Co-op"
+    />
+  </div>
+</section>
+
       <section id="experience" className="mb-8">
-        <h2 className="mb-2 text-xl font-semibold">My Experience</h2>
-        <div className="cursor-target">
-    <ExperienceSection title="Hackathon Participant @ Hack Canada" date="Feb 2025" description="Built NutriMind, an AI-powered recipe recommendation platform that helps users find personalized meal ideas based on dietary preferences, allergies, etc." />
-    </div>
-    <div className="cursor-target">
-    <ExperienceSection title="Challenge Finalist @ KWK X Deliotte" date="Dec 2024 - Feb 2025" description="Developed GaiaIntel, an app leveraging AI to provide sustainability insights and optimize eco-friendly choices." />
-    </div>
-    <div className="cursor-target">
-    <ExperienceSection title="App Development Scholar @ KWK" date="Aug 2024" description="Developed Care Comrade, an app designed to assist in emergency situations by providing step-by-step solutions to common problems." />
-    </div>
-      </section>
+  <h2 className="mb-2 text-xl font-semibold">My Experience</h2>
+
+  <div className="cursor-target">
+    <ExperienceSection
+      title="Programming Research Intern @ Sunnybrook Research Institute"
+      date="Jul 2026 – Aug 2026"
+      description="Developed Python software to interface with Radiation Force Balance equipment for focused ultrasound research. Built data processing and visualization tools using NumPy and Matplotlib to analyze experimental measurements and automate acoustic power calculations."
+    />
+  </div>
+
+  <div className="cursor-target">
+    <ExperienceSection
+      title="Assistant Teacher @ Spirit of Math"
+      date="Sep 2025 – Jul 2026"
+      description="Support students from Kindergarten to Grade 11 through one-on-one instruction while assisting teachers with classroom management and student progress."
+    />
+  </div>
+
+  <div className="cursor-target">
+    <ExperienceSection
+      title="Challenge Finalist @ Kode With Klossy × Deloitte"
+      date="Dec 2024 – Feb 2025"
+      description="Developed GaiaIntel, an AI-powered sustainability app that provides personalized eco-friendly recommendations and climate insights."
+    />
+  </div>
+
+  <div className="cursor-target">
+    <ExperienceSection
+      title="App Development Scholar @ Kode With Klossy"
+      date="Aug 2024"
+      description="Completed Kode With Klossy's mobile development program and built Care Comrade, an emergency assistance app using Swift and Xcode."
+    />
+  </div>
+</section>
 
       <section id="projects" className="mb-8">
       <h2 className="mb-6 text-xl font-semibold">My Projects</h2>
@@ -221,7 +256,7 @@ export default function Page() {
   links={[
     {
       type: "Github",
-      href: "https://github.com/NimayDesai/NutriMind",
+      href: "https://github.com/akretisharma/GaiaIntel",
       icon: <Icons.github className="size-3" />,
     },
   ]}
