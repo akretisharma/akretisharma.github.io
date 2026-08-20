@@ -32,13 +32,13 @@ export default function Page() {
         Hey, I'm Akreti 👋
       </h1>
       <p className="mb-6">
-  {`I'm an incoming Computer Science student at the University of Waterloo interested in software engineering, AI, and biomedical technology. I enjoy building intelligent systems that combine machine learning, computer vision, and real-world applications.`}
+  {`I'm an incoming Computer Science student at the University of Waterloo interested in software engineering, AI, and biomedical technology. I enjoy building systems that combine technology and real-world applications.`}
       </p>
       <div>
-        <ul className="font-sm mt-8 flex flex-col space-x-0 space-y-2 text-neutral-600 md:flex-row md:space-x-4 md:space-y-0 dark:text-neutral-300">
+        <ul className="font-sm mt-8 flex flex-col space-x-0 space-y-2 text-[#a6125e] md:flex-row md:space-x-4 md:space-y-0 dark:text-pink-300">
           <li className="cursor-target">
             <a
-              className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
+              className="flex items-center transition-all hover:text-pink-950 dark:hover:text-pink-200"
               rel="noopener noreferrer"
               target="_blank"
               href="https://www.linkedin.com/in/akretisharma/"
@@ -49,7 +49,7 @@ export default function Page() {
           </li>
           <li className="cursor-target">
             <a
-              className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
+              className="flex items-center transition-all hover:text-pink-950 dark:hover:text-pink-200"
               rel="noopener noreferrer"
               target="_blank"
               href="https://github.com/akretisharma"
@@ -60,7 +60,7 @@ export default function Page() {
           </li>
           <li className="cursor-target">
             <a
-              className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
+              className="flex items-center transition-all hover:text-pink-950 dark:hover:text-pink-200"
               rel="noopener noreferrer"
               target="_blank"
               href="./Akreti_Sharma_Resume.pdf"
@@ -84,6 +84,14 @@ export default function Page() {
       description="Bachelor of Computer Science (Honours), Co-op"
     />
   </div>
+
+  <div className="cursor-target">
+    <ExperienceSection
+      title="St. Augustine Catholic Secondary School"
+      date="Sep 2022 – Jul 2026"
+      description="Ontario Secondary School Diploma"
+    />
+  </div>
 </section>
 
       <section id="experience" className="mb-8">
@@ -93,7 +101,7 @@ export default function Page() {
     <ExperienceSection
       title="Programming Research Intern @ Sunnybrook Research Institute"
       date="Jul 2026 – Aug 2026"
-      description="Developed Python software to interface with Radiation Force Balance equipment for focused ultrasound research. Built data processing and visualization tools using NumPy and Matplotlib to analyze experimental measurements and automate acoustic power calculations."
+      description="Developed Python software for focused ultrasound research, including automated coordinate generation and visualization for a fluid dispensing system. Built data processing and visualization tools for Radiation Force Balance measurements using NumPy and Matplotlib."
     />
   </div>
 
@@ -129,7 +137,7 @@ export default function Page() {
 
       <button
     onClick={() => scroll("left")}
-    className="p-2 bg-black/50 dark:bg-white/50 text-white dark:text-black rounded-full hover:bg-black/70 dark:hover:bg-white/70 z-10"
+    className="p-2 bg-pink-950/50 dark:bg-white/50 text-white dark:text-black rounded-full hover:bg-pink-950/70 dark:hover:bg-white/70 z-10"
   >
     <ChevronLeft className="size-5" />
   </button>
@@ -315,7 +323,7 @@ export default function Page() {
 </div>
 <button
     onClick={() => scroll("right")}
-    className="p-2 bg-black/50 dark:bg-white/50 text-white dark:text-black rounded-full hover:bg-black/70 dark:hover:bg-white/70 z-10"
+    className="p-2 bg-pink-950/50 dark:bg-white/50 text-white dark:text-black rounded-full hover:bg-pink-950/70 dark:hover:bg-white/70 z-10"
   >
     <ChevronRight className="size-5" />
   </button>

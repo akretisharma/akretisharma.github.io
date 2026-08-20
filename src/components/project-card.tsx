@@ -45,9 +45,9 @@ export function ProjectCard({
   return (
     <Card
     className={cn(
-        "group flex flex-col overflow-hidden h-full rounded-xl border border-neutral-200 bg-white text-black transition-all duration-300 ease-out",
+        "group flex flex-col overflow-hidden h-full rounded-xl border border-white bg-pink-50 text-black transition-all duration-300 ease-out",
         "hover:scale-[1.0]",
-        "dark:border-neutral-800 dark:bg-black dark:text-white"
+        "dark:border-neutral-800 dark:bg-neutral-950 dark:text-white"
       )}
       
 >
@@ -75,7 +75,7 @@ export function ProjectCard({
       </Link>
 
   <CardHeader className="mt-4 px-4">
-    <CardTitle className="mt-1 text-lg font-semibold text-black dark:text-white">
+    <CardTitle className="mt-1 text-lg font-semibold text-black dark:text-pink-100">
       {title}
     </CardTitle>
     <time className="text-xs text-neutral-400">{dates}</time>
@@ -92,7 +92,7 @@ export function ProjectCard({
         {tags.map((tag) => (
           <Badge
             key={tag}
-            className="rounded-full bg-neutral-200 text-black dark:bg-neutral-800 px-2 py-0.5 text-xs dark:text-white"
+            className="rounded-full bg-white text-black dark:bg-neutral-800 px-2 py-0.5 text-xs dark:text-white"
           >
             {tag}
           </Badge>
@@ -106,7 +106,7 @@ export function ProjectCard({
   <div className="mt-2 flex flex-wrap gap-2">
     {(links ?? []).map((link, idx) => (
       <Link href={link.href} key={idx} target="_blank">
-        <Badge className="flex items-center gap-2 rounded-full bg-black dark:bg-white text-white dark:text-black px-3 py-1 text-xs hover:bg-neutral-800 dark:hover:bg-neutral-200 transition-colors">
+        <Badge className="flex items-center gap-2 rounded-full bg-pink-950 dark:bg-pink-200 text-white dark:text-black px-3 py-1 text-xs hover:bg-neutral-800 dark:hover:bg-neutral-200 transition-colors">
           {link.icon}
           {link.type}
         </Badge>

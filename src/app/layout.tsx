@@ -22,7 +22,7 @@ export default function RootLayout({
     <html
       lang="en"
       className={cx(
-        'text-pink-950 bg-pink-50 dark:text-white dark:bg-black',
+        'text-pink-950 bg-pink-100 dark:text-pink-100 dark:bg-black',
         GeistSans.variable,
         GeistMono.variable
       )}
