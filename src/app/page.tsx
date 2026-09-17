@@ -115,14 +115,6 @@ export default function Page() {
 
   <div className="cursor-target">
     <ExperienceSection
-      title="Challenge Finalist @ Kode With Klossy × Deloitte"
-      date="Dec 2024 – Feb 2025"
-      description="Developed GaiaIntel, an AI-powered sustainability app that provides personalized eco-friendly recommendations and climate insights."
-    />
-  </div>
-
-  <div className="cursor-target">
-    <ExperienceSection
       title="App Development Scholar @ Kode With Klossy"
       date="Aug 2024"
       description="Completed Kode With Klossy's mobile development program and built Care Comrade, an emergency assistance app using Swift and Xcode."
