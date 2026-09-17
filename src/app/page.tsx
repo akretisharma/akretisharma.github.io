@@ -32,7 +32,7 @@ export default function Page() {
         Hey, I'm Akreti 👋
       </h1>
       <p className="mb-6">
-  {`I'm an incoming Computer Science student at the University of Waterloo interested in software engineering, AI, and biomedical technology. I enjoy building systems that combine technology and real-world applications.`}
+  {`I'm an 1A Computer Science student at the University of Waterloo interested in software engineering, AI, and biomedical technology. I enjoy building systems that combine technology and real-world applications.`}
       </p>
       <div>
         <ul className="font-sm mt-8 flex flex-col space-x-0 space-y-2 text-[#a6125e] md:flex-row md:space-x-4 md:space-y-0 dark:text-pink-300">
