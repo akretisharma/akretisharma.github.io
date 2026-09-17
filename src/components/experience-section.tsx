@@ -12,7 +12,7 @@ export function ExperienceSection({
   description,
 }: Props) {
   return (
-    <div className="w-full mx-auto border-b border-mauve-500 dark:border-neutral-800 py-4">
+    <div className="w-full mx-auto border-b border-mauve-300 dark:border-neutral-600 py-4">
         <div className="flex items-center justify-between mb-2">
             <h3 className="text-md font-semibold text-neutral-900 dark:text-neutral-100">
                 {title}
