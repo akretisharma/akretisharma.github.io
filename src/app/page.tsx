@@ -140,6 +140,42 @@ export default function Page() {
 
 <div className="flex-shrink-0 w-[280px] snap-start cursor-target">
   <ProjectCard
+    href={"https://devpost.com/software/inventorychecker"}
+    key={"Needy"}
+    title={"Needy"}
+    description={
+      "AI inventory assistant built at Hack the North 2026 that combines voice, computer vision, and procurement. Uses OMNI and a Luxonis OAK camera to identify missing items, compare prices across four retailers, and create Zip purchase requests with automated vendor selection."
+    }
+    dates={"Sep 2026"}
+    tags={[
+      "React",
+      "FastAPI",
+      "Python",
+      "OMNI",
+      "Computer Vision",
+      "Zip",
+      "TailwindCSS",
+    ]}
+    image="/needy.jpg"
+    video={""}
+    links={[
+      {
+        type: "Devpost",
+        href: "https://devpost.com/software/inventorychecker",
+        icon: <Icons.globe className="size-3" />,
+      },
+      {
+        type: "Github",
+        href: "https://github.com/akretisharma/omni-fridge-agent",
+        icon: <Icons.github className="size-3" />,
+      },
+    ]}
+  />
+</div>
+
+
+<div className="flex-shrink-0 w-[280px] snap-start cursor-target">
+  <ProjectCard
     href={"https://devpost.com/software/goodminton"}
     key={"Goodminton"}
     title={"Goodminton"}
