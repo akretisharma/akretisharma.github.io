@@ -138,6 +138,37 @@ export default function Page() {
     className="flex gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide"
   >
 
+
+<div className="flex-shrink-0 w-[280px] snap-start cursor-target">
+  <ProjectCard
+    href={"https://www.figma.com/proto/WIUvN9ic78XWpvFZW0mETl/JACK-%E2%80%93-Prototype-screens?node-id=1-2&p=f&t=5KviHHPEKHOfatBt-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A2&show-proto-sidebar=1"}
+    key={"Bridge"}
+    title={"Bridge"}
+    description={
+      "Academic support platform | 3rd Place, ProdCon Waterloo"
+    }
+    dates={"Nov 2026"}
+    tags={[
+      "Figma",
+      "UI/UX Design",
+      "Prototyping",
+      "User-Centred Design",
+      "Product Design",
+      "Accessibility",
+    ]}
+    image="/bridge.jpg"
+    video={""}
+    links={[
+      {
+        type: "Figma",
+        href: "https://www.figma.com/proto/WIUvN9ic78XWpvFZW0mETl/JACK-%E2%80%93-Prototype-screens?node-id=1-2&p=f&t=5KviHHPEKHOfatBt-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A2&show-proto-sidebar=1",
+        icon: <Icons.globe className="size-3" />,
+      },
+    ]}
+  />
+</div>
+
+
 <div className="flex-shrink-0 w-[280px] snap-start cursor-target">
   <ProjectCard
     href={"https://devpost.com/software/inventorychecker"}
