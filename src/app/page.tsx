@@ -156,7 +156,7 @@ export default function Page() {
       "Product Design",
       "Accessibility",
     ]}
-    image="/bridge.jpg"
+    image="/bridge.png"
     video={""}
     links={[
       {
@@ -165,6 +165,7 @@ export default function Page() {
         icon: <Icons.globe className="size-3" />,
       },
     ]}
+    hackathonWinner
   />
 </div>
 
